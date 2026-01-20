@@ -1,1 +1,5 @@
-
+{
+  "warning-msg": "Der Regen scheint äußerst säurehaltig zu sein. Du solltest lieber Schutz suchen.",
+  "safe-msg": "Du bist dem Regen nicht mehr ausgesetzt.",
+  "death-msg": "{0} wurde durch Säure zerfressen."
+}
