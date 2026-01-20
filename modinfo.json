@@ -1,0 +1,13 @@
+{
+  "type": "code",
+  "modid": "acidrain",
+  "name": "Acid Rain Event",
+  "authors": [
+    "CoB", "WickedSchnitzel", "AI"
+  ],
+  "description": "Makes rain sometimes be very sour and damage players and clothes alike.",
+  "version": "1.0.0",
+  "dependencies": {
+    "game": ""
+  }
+}
