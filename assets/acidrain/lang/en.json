@@ -1,1 +1,5 @@
-
+{
+  "warning-msg": "The rain appears to be extremely acidic. You should seek shelter.",
+  "safe-msg": "You are no longer exposed to the rain.",
+  "death-msg": "{0} has been corroded by acid."
+}
