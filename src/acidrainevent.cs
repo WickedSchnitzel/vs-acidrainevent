@@ -15,7 +15,6 @@ namespace AcidRainMod
         public float MinRainIntensity = 0.05f;
         public double EventChance = 0.1;
         
-        // Neu: Konfigurierbares Intervall in Millisekunden (Standard: 2000ms)
         public int TickIntervalMs = 2000;
 
         public string WarningColor = "#841414"; 
@@ -50,10 +49,8 @@ namespace AcidRainMod
         {
             this.sapi = api;
 
-            // Registriert den Tick-Listener mit dem Wert aus der Config
             api.Event.RegisterGameTickListener(OnServerUpdate, config.TickIntervalMs);
 
-            // Cleanup-Event: Entfernt Spielerdaten aus dem RAM, wenn sie den Server verlassen
             api.Event.PlayerLeave += (player) => {
                 playerStates.Remove(player.PlayerUID);
             };
@@ -91,7 +88,6 @@ namespace AcidRainMod
                 bool isExposed = player.Entity.Pos.Y + 1.2 >= rainHeight;
                 bool shouldBeWarnedNow = isRaining && state.IsInAcidShower && isExposed;
 
-                // --- NACHRICHTEN LOGIK (Domain: acidrain) ---
                 if (shouldBeWarnedNow && !state.IsWarned)
                 {
                     string translatedMsg = Lang.Get("acidrain:warning-msg");
